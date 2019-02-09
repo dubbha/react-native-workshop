@@ -1,1 +1,49 @@
-# workshopRn
+# React Native workshop by [Ivan Iankovskyi](https://github.com/AtticusFetch)
+
+- [x] Bootstrap the app
+- [x] Add navigation with 1 basic screen
+- [x] Setup tab navigation with blank tabs
+- [x] On the first screen we will implement the Feed component
+- [x] Initially, feed shows just 1 button: Find Stuff
+- [x] This is because we have a limited amount of requests
+- [x] When button is pressed - we show a spinner (default) and fetch initial set of movies (page 1, search apple)
+- [x] Save data to local storage ([<page_num>]: [result])
+- [x] Before doing a fetch - check for data in the storage
+- [x] For this - we need to store current page somewhere in state
+- [x] For now we will have only 1 there
+- [x] Use the API to fetch the items (1-2-3 is enough to fill the screen)
+- [x] Pick the view for the feed component
+- [x] Fill it with data
+- [x] Create markup components for data
+- [x] Add onEndReached callback
+- [x] Check for data in storage
+- [x] If no data - fetch
+- [x] Store new data
+- [x] Push new data to the current results count
+- [x] Increment page number in state
+- [x] Configure threshold
+- [x] Let’s create our own animated spinner
+- [ ] Let’s add the animation of the feed sliding down when rendered initially
+- [ ] Let’s create the details page component on the second screen
+- [ ] For now we will hardcode it to use first film in the storage
+- [ ] Fetch details by id
+- [ ] Add a Website link that will shows action menu with options to open browser or in-app web view
+- [ ] Create markup and style this page
+- [ ] Now let’s change our feed screen to a stack navigator and place details page there
+- [ ] Add animation where poster shrinks as user scrolls so that is always visible, but after 50% it starts to fade out
+- [ ] Let’s add a second screen
+- [ ] It will show top rated movies from whatever is in storage
+- [ ] It will look like a horizontal carousel
+- [ ] Underneath it it will render the current movie description and its rating
+- [ ] Create a search bar on the feed screen
+- [ ] Do search on keyboard return
+- [ ] Use provided value with search api
+- [ ] Add the ability to enter a year with a native select component (like a search but simpler)
+- [ ] Do the new search
+- [ ] Save data as [year_apple]: [result]
+- [ ] Check the second screen
+- [ ] Create third screen
+- [ ] Two buttons here: upload video, upload photo
+- [ ] Place the content on top
+- [ ] https://www.companyshop.co.uk/company-shop/news-and-enquiries/news-centre/company-shop-joins-london-stock-exchanges-inaugural-elite-programme/
+- [ ] When user taps on content - it shows in full screen modal

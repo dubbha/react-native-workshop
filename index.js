@@ -3,7 +3,7 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
- import React from 'react';
+import React from 'react';
 import { AppRegistry, View, Text } from 'react-native';
 import { createBottomTabNavigator, createTabNavigator, createAppContainer } from "react-navigation";
 
@@ -28,4 +28,3 @@ const TabNavigator = createBottomTabNavigator({
 });
 
 AppRegistry.registerComponent(appName, () => createAppContainer(TabNavigator));
-// AppRegistry.registerComponent(appName, () => FeedScreen);

@@ -8,6 +8,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'pink',
     borderWidth: 1,
+    borderColor: 'green',
   },
   text: {
     color: 'red',

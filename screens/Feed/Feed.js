@@ -10,8 +10,15 @@ import { fetchMovies } from './../../api';
 import sharedStyle from './../../shared/style';
 import style from './style';
 
-type Props = {};
-type State = {};
+type Props = {
+  
+};
+
+type State = {
+  loading: boolean;
+  data: any;
+  page: number;
+};
 
 class Feed extends Component<Props, State> {
   state = {
@@ -21,7 +28,7 @@ class Feed extends Component<Props, State> {
   };
 
   componentDidMount() {
-    this.loadMovies();
+    // this.loadMovies();
   }
 
   loadMovies = () => {
@@ -30,8 +37,8 @@ class Feed extends Component<Props, State> {
     fetchMovies(this.state.page)
       .then(res => {
         if (this.state.data) {
-          // this.setState({ data: [...this.state.data, ...res] });
-          this.state.data.push(...res)
+          this.setState({ data: [...this.state.data, ...res] });
+          // this.state.data.push(...res)
         } else {
           this.setState({ data: res });
         }
@@ -51,7 +58,7 @@ class Feed extends Component<Props, State> {
     const { loading, data } = this.state;
 
     return (
-      <SafeAreaView style={{ backgroundColor: 'white', borderWidth: 1, borderColor: 'red', flex: 1 }}>
+      <SafeAreaView style={sharedStyle.container}>
         {!data && !loading && (
           <TouchableOpacity
             onPress={this.loadMovies}

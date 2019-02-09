@@ -19,7 +19,7 @@ class Second extends Component<Props, State> {
       Animated.timing(this.rotate, {
         toValue: 360,
         duration: 1500,
-        easing: Easing.linear(),
+        easing: Easing.linear,
       }),
       {
         iterations: 10
@@ -37,10 +37,12 @@ class Second extends Component<Props, State> {
           style={{
             height: 100,
             width: 100,
-            transform: [{ rotate: this.rotate.interpolate({
-            inputRange: [0, 360],
-            outputRange: ['0deg', '360deg'],
-          }) }],
+            transform: [{
+              rotate: this.rotate.interpolate({
+                inputRange: [0, 360],
+                outputRange: ['0deg', '360deg'],
+                }),
+            }],
           }}
         />
       </Animated.View>
